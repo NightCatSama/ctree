@@ -8,7 +8,12 @@ Through nodeJS quickly generate project directory tree structure. There are four
 - **page** - According to the directory structure to generate the page
 - **log** - According to the directory structure in the shell, default it
 
-## dependencies
+## Pending
+- [] Style optimization
+- [] Add `.ignore`
+- [] Level limit
+
+## Dependencies
 
  - [vue](https://www.npmjs.com/package/vue)
  - [vue-server-renderer](https://www.npmjs.com/package/vue-server-renderer)
