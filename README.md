@@ -55,57 +55,47 @@ module.exports = {
 ```
 
 ### through `command` setting
-1. project path (default: `./src`)
+- project path (default: `./src`)
 example:
 
 ```js
 ctree -p src
-```
-or
-```js
+// or
 ctree --path=src
 ```
 
-2. custom config (default: `./dirrc.js`)
+- custom config (default: `./dirrc.js`)
 example:
 
 ```js
 ctree -c ./config/.dirrc.js
-```
-or
-```js
+// or
 ctree --config=./config/.dirrc.js
 ```
 
-3. set port (default: `233`)
+- set port (default: `233`)
 example:
 
 ```js
 ctree server -d 8080
-```
-or
-```js
+// or
 ctree server --port=8080
 ```
 
-4. The path of the generated image (default: `./index.png`)
+- The path of the generated image (default: `./index.png`)
 example:
 
 ```js
 ctree img -i img.jpg
-```
-or
-```js
+// or
 ctree img --img_path=img.jpg
 ```
 
-5. The path of the generated html (default: `./dir.html`)
+- The path of the generated html (default: `./dir.html`)
 example:
 
 ```js
 ctree img -h pm.html
-```
-or
-```js
+// or
 ctree img --page_page=pm.html
 ```

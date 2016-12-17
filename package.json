@@ -1,9 +1,9 @@
 {
-  "name": "nightcatsama",
-  "version": "1.0.1",
-  "description": "for oneself",
+  "name": "ctree",
+  "version": "1.0.2",
+  "description": "According to the directory structure of spanning tree",
   "main": "index.js",
-  "bin": "./index.js",
+  "bin": "/",
   "scripts": {
     "dir": "node index.js server --port=1234"
   },
