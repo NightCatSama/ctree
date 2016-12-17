@@ -19,7 +19,7 @@ phantom.create()
   })
   .then(content => {
     if (base.img) {
-      console.log(`The image has been created successfully! Open ${base.option.img_path} can to view!`.green)
+      console.log(`The image has been created successfully! Open ${base.option.img_path} can to view!`.green.bold)
       return phPage.render(path.join(base.projectRoot, base.option.img_path))
     }
     if (base.page) {
@@ -43,7 +43,7 @@ function createPage(content) {
       if (err) {
         return rej(err)
       }
-      console.log(`The page has been created successfully! Open ${base.option.page_path} can access!`.green)
+      console.log(`The page has been created successfully! Open ${base.option.page_path} can access!`.green.bold)
       res()
     })
   })

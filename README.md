@@ -3,15 +3,14 @@
 ## What is ctree?
 Through nodeJS quickly generate project directory tree structure. There are four ways:
 
-- **server** - Open the local server to view tree
-- **img** - According to the directory structure spanning tree images
-- **page** - According to the directory structure to generate the page
-- **log** - According to the directory structure in the shell, default it
+ - **server** - Open the local server to view tree
+ - **img** - According to the directory structure spanning tree images
+ - **page** - According to the directory structure to generate the page
+ - **log** - According to the directory structure in the shell, default it
 
 ## Pending
-- [] Style optimization
-- [] Add `.ignore`
-- [] Level limit
+ - [ ] Modify the style
+ - [ ] Add ignore
 
 ## Dependencies
 
@@ -24,11 +23,8 @@ Through nodeJS quickly generate project directory tree structure. There are four
 # globel install
 npm install -g ctree
 
-# local install
-npm install ctree
-
-# ready
-ctree
+# Any directory
+ctree -p src/
 ```
 
 ## Option
@@ -60,7 +56,7 @@ module.exports = {
 ```
 
 ### through `command` setting
-- project path (default: `./src`)
+project path (default: `./src`)<br>
 example:
 
 ```js
@@ -69,7 +65,7 @@ ctree -p src
 ctree --path=src
 ```
 
-- custom config (default: `./dirrc.js`)
+custom config (default: `./dirrc.js`)<br>
 example:
 
 ```js
@@ -78,7 +74,7 @@ ctree -c ./config/.dirrc.js
 ctree --config=./config/.dirrc.js
 ```
 
-- set port (default: `233`)
+set port (default: `233`)<br>
 example:
 
 ```js
@@ -87,7 +83,7 @@ ctree server -d 8080
 ctree server --port=8080
 ```
 
-- The path of the generated image (default: `./index.png`)
+The path of the generated image (default: `./index.png`)<br>
 example:
 
 ```js
@@ -96,11 +92,20 @@ ctree img -i img.jpg
 ctree img --img_path=img.jpg
 ```
 
-- The path of the generated html (default: `./dir.html`)
+The path of the generated html (default: `./dir.html`)<br>
 example:
 
 ```js
 ctree img -h pm.html
 // or
-ctree img --page_page=pm.html
+ctree img --page_page=tree.html
+```
+
+Limit display level, `0` is unlimited (default: 0) <br>
+example:
+
+```js
+ctree img -i 3
+// or
+ctree img --limit=3
 ```

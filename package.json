@@ -1,6 +1,6 @@
 {
   "name": "ctree",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "According to the directory structure of spanning tree",
   "bin": {
     "ctree": "./bin/index.js"
