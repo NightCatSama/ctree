@@ -48,8 +48,8 @@ module.exports = {
 //  .dirrc.js
 module.exports = {
   path: './test',
-  img_path: './dir.png',
-  page_path: './pm.html'
+  img_path: './tree.jpg',
+  page_path: './tree.html'
   port: 233
 }
 ```
@@ -58,34 +58,54 @@ module.exports = {
 1. project path (default: `./src`)
 example:
 
-`ctree server -p ./src`
+```js
+ctree -p src
+```
 or
-`ctree server --path="./src"`
+```js
+ctree --path=src
+```
 
 2. custom config (default: `./dirrc.js`)
 example:
 
-`-c ./config/.dirrc.js`
+```js
+ctree -c ./config/.dirrc.js
+```
 or
-`--config="./config/.dirrc.js"`
+```js
+ctree --config=./config/.dirrc.js
+```
 
 3. set port (default: `233`)
 example:
 
-`ctree server -d 8080`
+```js
+ctree server -d 8080
+```
 or
-`ctree server --port="8080"`
+```js
+ctree server --port=8080
+```
 
 4. The path of the generated image (default: `./index.png`)
 example:
 
-`ctree img -i ./img.jpg`
+```js
+ctree img -i img.jpg
+```
 or
-`ctree img --img_path="./img.jpg"`
+```js
+ctree img --img_path=img.jpg
+```
 
 5. The path of the generated html (default: `./dir.html`)
 example:
 
-`ctree img -h pm.html`
+```js
+ctree img -h pm.html
+```
 or
-`ctree img --page_page="pm.html"`
+```js
+ctree img --page_page=pm.html
+```

@@ -1,7 +1,5 @@
 var fs = require('fs')
-var path = require('path')
 global.colors = require('colors')
-var router = require('./lib/router.js')
 var base = require('./lib/base.js')
 var util = require('./lib/util.js')
 
@@ -20,10 +18,7 @@ function getTreeData() {
   })
 }
 
-/*
- * @kinds [log, img, server, page]
- * According to the user's parameters corresponding to different operation
- */
+//According to the user's parameters corresponding to different operation
 function start(arr) {
   if (kinds.length === 0) {
     require('./lib/log.js')(arr)
