@@ -3,8 +3,8 @@ var path = require('path')
 var fs = require('fs')
 var base = require('./lib/base.js')
 
-var phInstance = null;
-var phPage = null;
+var phInstance = null
+var phPage = null
 phantom.create()
   .then(instance => {
     phInstance = instance
@@ -12,14 +12,15 @@ phantom.create()
   })
   .then(page => {
     phPage = page
-    return page.open('http://localhost:233/')
+    return page.open('http://localhost:' + base.option.port)
   })
   .then(status => {
     return phPage.property('content')
   })
   .then(content => {
     if (base.img) {
-      console.log(`The image has been created successfully! Open ${base.option.img_path} can to view!`.green.bold)
+      console.log()
+      console.log(`The image has been created successfully!`.green.bold)
       return phPage.render(path.join(base.projectRoot, base.option.img_path))
     }
     if (base.page) {
@@ -43,7 +44,8 @@ function createPage(content) {
       if (err) {
         return rej(err)
       }
-      console.log(`The page has been created successfully! Open ${base.option.page_path} can access!`.green.bold)
+      console.log()
+      console.log(`The page has been created successfully!`.green.bold)
       res()
     })
   })
