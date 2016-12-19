@@ -8,22 +8,22 @@ Through nodeJS quickly generate project directory tree structure. There are four
  - **page** - According to the directory structure to generate the page
  - **log** - According to the directory structure in the shell, default it
 
-## Pending
- - [ ] Modify the style
- - [ ] Add ignore
-
 ## Dependencies
 
  - [vue](https://www.npmjs.com/package/vue)
  - [vue-server-renderer](https://www.npmjs.com/package/vue-server-renderer)
  - [phantom](https://www.npmjs.com/package/phantom)
 
-## Usage
+
+## Install
 ``` bash
 # globel install
 npm install -g ctree
+```
 
-# Any directory
+## Usage
+``` bash
+# Any place, any folder
 ctree -p src/
 ```
 
@@ -98,7 +98,7 @@ example:
 ```js
 ctree img -h pm.html
 // or
-ctree img --page_page=tree.html
+ctree img --page_path=tree.html
 ```
 
 Limit display level, `0` is unlimited (default: 0) <br>
