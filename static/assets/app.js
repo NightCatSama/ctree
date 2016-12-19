@@ -6,8 +6,8 @@
     template: `
       <div>
         <div v-for="item in OrderData" class="group">
-          <div v-text="item.name" :class="['name', { isDirectory: item.isDirectory, isEmpty: item.childrens && item.childrens.length === 0 }]" :data-ext="item.ext"></div>
-          <div class="info">
+          <a :href="'#' + item.name" v-text="item.name" :class="['name', { isDirectory: item.isDirectory, isEmpty: item.childrens && item.childrens.length === 0 }]" :data-ext="item.ext"></a>
+          <div class="info" :id="item.name">
             <div>文件名称：<span v-text="item.name"></span></div>
             <div>文件路径：<span v-text="item.path"></span></div>
             <div>文件相对路径：<span v-text="item.relativePath"></span></div>

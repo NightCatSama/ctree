@@ -35,7 +35,7 @@ Can through two ways to configure ctree:
 The priority is `command` > `.js` > `default`
 
 default option:
-```js
+``` bash
 module.exports = {
   path: './src',
   img_path: './dir.png',
@@ -45,7 +45,7 @@ module.exports = {
 ```
 
 ### through `.js` setting
-```js
+``` bash
 //  .dirrc.js
 module.exports = {
   path: './test',
@@ -59,7 +59,7 @@ module.exports = {
 project path (default: `./src`)<br>
 example:
 
-```js
+``` bash
 ctree -p src
 // or
 ctree --path=src
@@ -68,7 +68,7 @@ ctree --path=src
 custom config (default: `./dirrc.js`)<br>
 example:
 
-```js
+``` bash
 ctree -c ./config/.dirrc.js
 // or
 ctree --config=./config/.dirrc.js
@@ -77,7 +77,7 @@ ctree --config=./config/.dirrc.js
 set port (default: `233`)<br>
 example:
 
-```js
+``` bash
 ctree server -d 8080
 // or
 ctree server --port=8080
@@ -86,7 +86,7 @@ ctree server --port=8080
 The path of the generated image (default: `./index.png`)<br>
 example:
 
-```js
+``` bash
 ctree img -i img.jpg
 // or
 ctree img --img_path=img.jpg
@@ -95,7 +95,7 @@ ctree img --img_path=img.jpg
 The path of the generated html (default: `./dir.html`)<br>
 example:
 
-```js
+``` bash
 ctree img -h pm.html
 // or
 ctree img --page_path=tree.html
@@ -104,7 +104,7 @@ ctree img --page_path=tree.html
 Limit display level, `0` is unlimited (default: 0) <br>
 example:
 
-```js
+``` bash
 ctree img -i 3
 // or
 ctree img --limit=3

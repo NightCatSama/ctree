@@ -33,7 +33,7 @@
 		padding: 10px 5px 5px 5px;
 	}
 
-  .name:hover +.info {
+  .info:target {
     display: block;
   }
 
@@ -52,6 +52,8 @@
     padding-left: 40px;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    color: #666;
   }
 
   .name.isDirectory::after {
