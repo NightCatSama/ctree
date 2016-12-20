@@ -1,4 +1,5 @@
 # ctree
+![ctree](http://7xqnme.com1.z0.glb.clouddn.com/16-12-20/76833672-file_1482227415319_7215.png)
 
 ## What is ctree?
 Through nodeJS quickly generate project directory tree structure. There are four ways:
