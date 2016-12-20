@@ -97,18 +97,18 @@ The path of the generated html (default: `./dir.html`)<br>
 example:
 
 ``` bash
-ctree img -h pm.html
+ctree page -h pm.html
 // or
-ctree img --page_path=tree.html
+ctree page --page_path=tree.html
 ```
 
 Limit display level, `0` is unlimited (default: 0) <br>
 example:
 
 ``` bash
-ctree img -i 3
+ctree log -i 3
 // or
-ctree img --limit=3
+ctree log --limit=3
 ```
 
 Ignore files spanning tree (default: ['node_modules/']) <br>
