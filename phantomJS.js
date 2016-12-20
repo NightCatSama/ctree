@@ -5,6 +5,7 @@ var base = require('./lib/base.js')
 
 var phInstance = null
 var phPage = null
+
 phantom.create()
   .then(instance => {
     phInstance = instance

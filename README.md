@@ -109,3 +109,14 @@ ctree img -i 3
 // or
 ctree img --limit=3
 ```
+
+Ignore files spanning tree (default: ['node_modules/']) <br>
+example:
+
+``` bash
+//  ignore Folder, File, A single directory wildcard, Inheritable wildcards
+ctree -g "['node_modules/', '.gitignore', 'js/*.json', 'asset/**.md']"
+// or
+ctree --ignore="['node_modules/', '.gitignore', 'js/*.json', 'asset/**.md']"
+```
+

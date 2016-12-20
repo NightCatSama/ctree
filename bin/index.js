@@ -4,14 +4,16 @@ var fs = require('fs')
 global.colors = require('colors')
 var base = require('../lib/base.js')
 var util = require('../lib/util.js')
+var ignore = require('../lib/ignore.js')
 
+var rules = ignore.rules
 var kinds = base.kinds
 var srcPath = base.srcPath
 
 //  get Array of directory tree structure
 function getTreeData() {
   var promise = new Promise((resolve, reject) => {
-    util.getData(srcPath, resolve, reject)
+    util.getData(srcPath, resolve, reject, 1, rules)
   })
   promise.then(function(arr) {
     start(arr)
