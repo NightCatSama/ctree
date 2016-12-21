@@ -24,12 +24,19 @@ base.option.help && help()
 //According to the user's parameters corresponding to different operation
 function start(arr) {
 	if (kinds.length === 0) {
+    base.log = true
 		require('../lib/log.js')(arr)
 	}
 	else {
-		kinds.indexOf('log') > -1 && require('../lib/log.js')(arr)
+    var log_kinds = ['log', 'txt']
+		var isLog = log_kinds.some(kind => kinds.indexOf(kind) > -1)
+    isLog && require('../lib/log.js')(arr)
+
 		var server_kinds = ['img', 'server', 'page']
-		server_kinds.some(kind => kinds.indexOf(kind) > -1) ? require('../lib/server.js')(arr) : help(true)
+    var isServer = server_kinds.some(kind => kinds.indexOf(kind) > -1)
+		isServer && require('../lib/server.js')(arr)
+
+    !isLog && !isServer && help(true)
 	}
 }
 

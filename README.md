@@ -5,8 +5,9 @@
 Through nodeJS quickly generate project directory tree structure. There are four ways:
 
  - **server** - Open the local server to view tree
- - **img** - According to the directory structure spanning tree images
- - **page** - According to the directory structure to generate the page
+ - **img** - According to the directory structure spanning an image file
+ - **page** - According to the directory structure to generate a page
+ - **txt** - According to the directory structure to generate a txt file
  - **log** - According to the directory structure in the shell, default it
 
 ## Dependencies
@@ -38,10 +39,10 @@ The priority is `command` > `.js` > `default`
 default option:
 ``` bash
 module.exports = {
-  path: './src',
-  img_path: './dir.png',
-  page_path: './dir.html',
-  port: 233
+	path: './src',
+	ignore: ['node_modules/', '.git/'],
+	limit: 0,
+	port: 8080
 }
 ```
 
@@ -49,10 +50,10 @@ module.exports = {
 ``` bash
 //  .dirrc.js
 module.exports = {
-  path: './test',
-  img_path: './tree.jpg',
-  page_path: './tree.html'
-  port: 233
+	path: '../ctree/',
+	ignore: ['node_modules/', '.git/'],
+	limit: 0,
+	port: 233
 }
 ```
 
@@ -75,31 +76,26 @@ ctree -c ./config/.dirrc.js
 ctree --config=./config/.dirrc.js
 ```
 
-set port (default: `233`)<br>
+set port (default: `8080`)<br>
 example:
 
 ``` bash
-ctree server -d 8080
+ctree server -d 233
 // or
-ctree server --port=8080
+ctree server --port=233
 ```
 
-The path of the generated image (default: `./index.png`)<br>
+The path of the output (default: `./ctree.*`)<br>
 example:
 
 ``` bash
-ctree img -i img.jpg
+ctree img -o ctree.jpg
+ctree page -o ctree.html
+ctree txt -o ctree.txt
 // or
-ctree img --img_path=img.jpg
-```
-
-The path of the generated html (default: `./dir.html`)<br>
-example:
-
-``` bash
-ctree page -h pm.html
-// or
-ctree page --page_path=tree.html
+ctree img --output=ctree.jpg
+ctree page --output=ctree.html
+ctree txt --output=ctree.txt
 ```
 
 Limit display level, `0` is unlimited (default: `0`) <br>
