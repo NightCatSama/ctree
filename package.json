@@ -1,6 +1,6 @@
 {
   "name": "ctree",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "According to the directory structure of spanning tree",
   "bin": {
     "ctree": "./bin/index.js"
@@ -11,8 +11,16 @@
   "scripts": {
     "start": "node ./bin/index.js -p test"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightCatSama/ctree.git"
+  },
+  "author": "NightCatSama <642163903@qq.com>",
+  "licenses": "MIT",
+  "bugs": {
+    "url": "https://github.com/NightCatSama/ctree/issues"
+  },
+  "homepage": "https://github.com/NightCatSama/ctree#readme",
   "devDependencies": {
   },
   "dependencies": {

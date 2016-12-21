@@ -1,98 +1,100 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>cTree</title>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  <meta content="yes" name="apple-mobile-web-app-capable" />
-  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="full-screen" content="yes">
-  <meta name="x5-fullscreen" content="true">
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font-family: "Segoe UI", 'Microsoft Yahei', Helvetica, Arial;
-  }
-  body {
-    background-color: #fff;
-  }
-	.children-group {
-		padding-left: 40px;
-	}
+    <title>cTree</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-	.group {
-		padding: 10px 5px 5px 5px;
-	}
+    html {
+        font-family: "Segoe UI", 'Microsoft Yahei', Helvetica, Arial;
+    }
 
-  .info:target {
-    display: block;
-  }
+    body {
+        background-color: #fff;
+    }
 
-  .info {
-    display: none;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #333;
-    color: #fff;
-  }
+    .children-group {
+        padding-left: 40px;
+    }
 
-  .name {
-    padding-left: 40px;
-    cursor: pointer;
-    position: relative;
-    text-decoration: none;
-    color: #666;
-  }
+    .group {
+        padding: 10px 5px 5px 5px;
+    }
 
-  .name.isDirectory::after {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABw0lEQVRYR+2XT1LCMBTGv5e4YCeMYS2cQNk4k27EE4gnUE8g3kBOIJxAuAGeQNzQJXgDXMMMuHOTPKdlwAL9w0wLbOiyTd73y5eXl1fCgR86sD6OAEcHVhyYuigZlq8MLhHRZZoEZeahIHRFzrYKFcyiYi0B5uJiAKJ8GuGNucwzSbZS0BiFxV0CTPqyC8JtpuKLYIx35ZhaAoAYgeh8JwAAlDahCf/vgCs5QvxRadPeFVgsAIO/itqmSsYk8FgAYn4+c2zTCzKJdihJY/ndOxkE21AOuouXsQBSmkrhCsOxiypBfmytlDSQzd0CIhqA+Vs5tuSvvi+aIHpKirv198CpiANoKcfWvaBjVwwJdLG1QMJABj6L2lS9YTEAc5umA+TNr5xmJT6Pwx2l7UMMAP8obf2KOHGlN/AtS4Bgckc4wCOlbXluv+wRcJ0lAMPcFDV68VsA9MCYgRBaQtMABaviNpUwjdbG3PXitneAYAImbUGmKw8EW7lb9u6AhCkHe4P9AgSqa8hdINoA3e/Kd7/8gBtFbV+CGqstGcQQoNNdQHjZf5Kz1fX+cLUp9cuu8K7fWrYg3JE5Ww9rTo//BUcH/gB04cghovhrMgAAAABJRU5ErkJggg==');
-    background-size: cover;
-  }
+    .info:target {
+        display: block;
+    }
 
-  .isEmpty.isDirectory::after {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA90lEQVRYR+2XTQ7BQBiG3+lYsKLJWOMINpJ2pTfoDTiCI3ADR+AEuEFtWHIE9hK1s5n5pERTEkmnEbX4uv5+nj6zmHcESv5EyfvBAKmB8w4NfZULAP2cxxIpTwc5az+WpQCnrTMDxMBmIIEmTc+MbXrea7MAMSDqVsOIYlkzHbeL2KovU5wBkFRwSCRJ57bg+lhn93wDwI47sVYxgdvDPmn8PUCylbBSvg7LAwCgPH3/+XIMMAAbYANsgA2wgf80sHEOEKJlly4KVhMdlW/ab9exfSgtuD5JJHPlmeELwCOWO1MAoXU4zU1CFwBLWTWjZ5DllxEbuAGiz34hR4ErGgAAAABJRU5ErkJggg==');
-  }
+    .info {
+        display: none;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #333;
+        color: #fff;
+    }
 
-  .name:not(.isDirectory)::after {
-    content: attr(data-ext);
-    position: absolute;
-    left: 0;
-    top: 3px;
-    width: 35px;
-    height: 18px;
-    line-height: 18px;
-    border-radius: 15px;
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    font-size: 14px;
-    transform: scale(.8);
-    -webkit-transform: scale(.8);
-  }
-  </style>
+    .name {
+        padding-left: 40px;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        color: #666;
+    }
+
+    .name.isDirectory::after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABw0lEQVRYR+2XT1LCMBTGv5e4YCeMYS2cQNk4k27EE4gnUE8g3kBOIJxAuAGeQNzQJXgDXMMMuHOTPKdlwAL9w0wLbOiyTd73y5eXl1fCgR86sD6OAEcHVhyYuigZlq8MLhHRZZoEZeahIHRFzrYKFcyiYi0B5uJiAKJ8GuGNucwzSbZS0BiFxV0CTPqyC8JtpuKLYIx35ZhaAoAYgeh8JwAAlDahCf/vgCs5QvxRadPeFVgsAIO/itqmSsYk8FgAYn4+c2zTCzKJdihJY/ndOxkE21AOuouXsQBSmkrhCsOxiypBfmytlDSQzd0CIhqA+Vs5tuSvvi+aIHpKirv198CpiANoKcfWvaBjVwwJdLG1QMJABj6L2lS9YTEAc5umA+TNr5xmJT6Pwx2l7UMMAP8obf2KOHGlN/AtS4Bgckc4wCOlbXluv+wRcJ0lAMPcFDV68VsA9MCYgRBaQtMABaviNpUwjdbG3PXitneAYAImbUGmKw8EW7lb9u6AhCkHe4P9AgSqa8hdINoA3e/Kd7/8gBtFbV+CGqstGcQQoNNdQHjZf5Kz1fX+cLUp9cuu8K7fWrYg3JE5Ww9rTo//BUcH/gB04cghovhrMgAAAABJRU5ErkJggg==');
+        background-size: cover;
+    }
+
+    .isEmpty.isDirectory::after {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA90lEQVRYR+2XTQ7BQBiG3+lYsKLJWOMINpJ2pTfoDTiCI3ADR+AEuEFtWHIE9hK1s5n5pERTEkmnEbX4uv5+nj6zmHcESv5EyfvBAKmB8w4NfZULAP2cxxIpTwc5az+WpQCnrTMDxMBmIIEmTc+MbXrea7MAMSDqVsOIYlkzHbeL2KovU5wBkFRwSCRJ57bg+lhn93wDwI47sVYxgdvDPmn8PUCylbBSvg7LAwCgPH3/+XIMMAAbYANsgA2wgf80sHEOEKJlly4KVhMdlW/ab9exfSgtuD5JJHPlmeELwCOWO1MAoXU4zU1CFwBLWTWjZ5DllxEbuAGiz34hR4ErGgAAAABJRU5ErkJggg==');
+    }
+
+    .name:not(.isDirectory)::after {
+        content: attr(data-ext);
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 35px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 15px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+    }
+    </style>
 </head>
+
 <body>
-  <div id="app"></div>
-<!--   <script src="/assets/vue.js"></script>
-  <script src="/assets/app.js"></script>
-  <script>app.$mount('#app')</script> -->
+    <div id="app"></div>
 </body>
 </html>

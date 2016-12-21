@@ -111,7 +111,7 @@ ctree log -i 3
 ctree log --limit=3
 ```
 
-Ignore files spanning tree (default: ['node_modules/']) <br>
+Ignore files spanning tree (default: ['node_modules/', '.git/']) <br>
 example:
 
 ``` bash
