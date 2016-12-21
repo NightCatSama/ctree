@@ -1,5 +1,5 @@
 # ctree
-![ctree](http://7xqnme.com1.z0.glb.clouddn.com/16-12-20/76833672-file_1482227415319_7215.png)
+![ctree](http://7xqnme.com1.z0.glb.clouddn.com/16-12-21/33015046-file_1482292473462_306d.png)
 
 ## What is ctree?
 Through nodeJS quickly generate project directory tree structure. There are four ways:
@@ -102,7 +102,7 @@ ctree page -h pm.html
 ctree page --page_path=tree.html
 ```
 
-Limit display level, `0` is unlimited (default: 0) <br>
+Limit display level, `0` is unlimited (default: `0`) <br>
 example:
 
 ``` bash
@@ -111,7 +111,7 @@ ctree log -i 3
 ctree log --limit=3
 ```
 
-Ignore files spanning tree (default: ['node_modules/', '.git/']) <br>
+Ignore files spanning tree (default: `['node_modules/', '.git/']`) <br>
 example:
 
 ``` bash
