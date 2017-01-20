@@ -5,10 +5,10 @@
 Through nodeJS quickly generate project directory tree structure. There are four ways:
 
  - **server** - Open the local server to view tree
- - **img** - According to the directory structure spanning an image file
- - **page** - According to the directory structure to generate a page
  - **txt** - According to the directory structure to generate a txt file
- - **log** - According to the directory structure in the shell, default it
+ - **img** - According to the directory structure to generate an image file
+ - **page** - According to the directory structure to generate a page
+ - **log** - Print the directory structure to the shell, this is default
 
 ## Dependencies
 

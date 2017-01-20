@@ -1,7 +1,12 @@
 {
   "name": "ctree",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "According to the directory structure of spanning tree",
+  "keywords": [
+    "tree",
+    "directory",
+    "directory structure"
+  ],
   "bin": {
     "ctree": "./bin/index.js"
   },
@@ -9,7 +14,7 @@
     "node": ">= 4.0"
   },
   "scripts": {
-    "start": "node ./bin/index.js -p test"
+    "start": "node ./bin/index.js -p static"
   },
   "repository": {
     "type": "git",
