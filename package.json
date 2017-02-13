@@ -1,6 +1,6 @@
 {
   "name": "ctree",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "According to the directory structure of spanning tree",
   "keywords": [
     "tree",
@@ -14,7 +14,7 @@
     "node": ">= 4.0"
   },
   "scripts": {
-    "start": "node ./bin/index.js -p static"
+    "start": "node ./bin/index.js server -p static"
   },
   "repository": {
     "type": "git",

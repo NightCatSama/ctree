@@ -4,23 +4,23 @@
 		Vue.component('group', {
 			name: 'group',
 			template: `
-      <div>
-        <div v-for="item in OrderData" class="group">
-          <a :href="'#' + item.name" v-text="item.name" :class="['name', { isDirectory: item.isDirectory, isEmpty: item.childrens && item.childrens.length === 0 }]" :data-ext="item.ext"></a>
-          <div class="info" :id="item.name">
-            <div>文件名称：<span v-text="item.name"></span></div>
-            <div>文件路径：<span v-text="item.path"></span></div>
-            <div>文件相对路径：<span v-text="item.relativePath"></span></div>
-            <template v-if="!item.isDirectory">
-              <div>文件大小：<span v-text="item.size"></span></div>
-              <div>文件最后修改时间：<span v-text="formatDate(item.ctime, 'yyyy-MM-dd hh:mm:ss')"></span></div>
-            </template>
-          </div>
-          <template v-if="item.isDirectory && item.childrens.length">
-            <group :data="item.childrens" v-show="item.isCollapse" class="children-group"></group>
-          </template>
-        </div>
-      </div>`,
+			<div>
+				<div v-for="item in OrderData" class="group">
+					<a :href="'#' + item.name" v-text="item.name" :class="['name', { isDirectory: item.isDirectory, isEmpty: item.childrens && item.childrens.length === 0 }]" :data-ext="item.ext"></a>
+					<div class="info" :id="item.name">
+						<div>文件名称：<span v-text="item.name"></span></div>
+						<div>文件路径：<span v-text="item.path"></span></div>
+						<div>文件相对路径：<span v-text="item.relativePath"></span></div>
+						<template v-if="!item.isDirectory">
+							<div>文件大小：<span v-text="item.size"></span></div>
+							<div>文件最后修改时间：<span v-text="formatDate(item.ctime, 'yyyy-MM-dd hh:mm:ss')"></span></div>
+						</template>
+					</div>
+					<template v-if="item.isDirectory && item.childrens.length">
+						<group :data="item.childrens" v-show="item.isCollapse" class="children-group"></group>
+					</template>
+				</div>
+			</div>`,
 			props: ['data'],
 			computed: {
 				OrderData: function() {
@@ -59,8 +59,8 @@
 		})
 		return new Vue({
 			template: `<div id="app">
-        <group :data="arr"></group>
-      </div>`,
+				<group :data="arr"></group>
+			</div>`,
 			data: {
 				counter: 0,
 				arr: []
