@@ -46,7 +46,7 @@ module.exports = {
 }
 ```
 
-### through `.js` setting
+### `.js`
 ``` bash
 //  .dirrc.js
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
 }
 ```
 
-### through `command` setting
+### `command`
 project path (default: `./src`)<br>
 example:
 
