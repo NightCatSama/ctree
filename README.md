@@ -37,7 +37,8 @@ Can through two ways to configure ctree:
 The priority is `command` > `.js` > `default`
 
 default option:
-``` bash
+```js
+// .dirrc.js
 module.exports = {
 	path: './src',
 	ignore: ['node_modules/', '.git/'],
@@ -46,74 +47,14 @@ module.exports = {
 }
 ```
 
-### `.js`
+
+### options 
+format:    `key [ command key ] { description } defaultValue`
 ``` bash
-//  .dirrc.js
-module.exports = {
-	path: '../ctree/',
-	ignore: ['node_modules/', '.git/'],
-	limit: 0,
-	port: 233
-}
+path [p] {The path of the directory tree} `src/`
+config [c] {The path of the custom configurations} `.dirrc.js`
+port [d] {The port number, only useful in server mode} `8080`
+output [o] {The output file name, only useful in `txt img page` mode} `ctree.[txt, png, html]`
+limit [i] {Limit display level, `0` is unlimited} `0`
+ignore [g] {Ignore files spanning tree} `['node_modules/', '.git/']`
 ```
-
-### `command`
-project path (default: `./src`)<br>
-example:
-
-``` bash
-ctree -p src
-// or
-ctree --path=src
-```
-
-custom config (default: `./dirrc.js`)<br>
-example:
-
-``` bash
-ctree -c ./config/.dirrc.js
-// or
-ctree --config=./config/.dirrc.js
-```
-
-set port (default: `8080`)<br>
-example:
-
-``` bash
-ctree server -d 233
-// or
-ctree server --port=233
-```
-
-The path of the output (default: `./ctree.*`)<br>
-example:
-
-``` bash
-ctree img -o ctree.jpg
-ctree page -o ctree.html
-ctree txt -o ctree.txt
-// or
-ctree img --output=ctree.jpg
-ctree page --output=ctree.html
-ctree txt --output=ctree.txt
-```
-
-Limit display level, `0` is unlimited (default: `0`) <br>
-example:
-
-``` bash
-ctree log -i 3
-// or
-ctree log --limit=3
-```
-
-Ignore files spanning tree (default: `['node_modules/', '.git/']`) <br>
-example:
-
-``` bash
-//  ignore Folder, File, A single directory wildcard, Inheritable wildcards
-ctree -g "['node_modules/', '.gitignore', 'js/*.json', 'asset/**.md']"
-// or
-ctree --ignore="['node_modules/', '.gitignore', 'js/*.json', 'asset/**.md']"
-```
-
