@@ -49,12 +49,12 @@ module.exports = {
 
 
 ### options 
-format:    `key [ command key ] { description } defaultValue`
-``` bash
-path [p] {The path of the directory tree} `src/`
-config [c] {The path of the custom configurations} `.dirrc.js`
-port [d] {The port number, only useful in server mode} `8080`
-output [o] {The output file name, only useful in `txt img page` mode} `ctree.[txt, png, html]`
-limit [i] {Limit display level, `0` is unlimited} `0`
-ignore [g] {Ignore files spanning tree} `['node_modules/', '.git/']`
-```
+
+| Key | Command Key | description | defaultValue |
+| - | :-: | - | - |
+| path | p | The path of the directory tree | `src/` |
+| config | c | The path of the custom configurations | `.dirrc.js` |
+| port | d | The port number, only useful in server mode | `8080` |
+| output | o | The output file name, only useful in `txt img page` mode | `ctree.[txt, png, html]` |
+| limit | i | Limit display level, `0` is unlimited | `0` |
+| ignore | g | Ignore files spanning tree | `['node_modules/', '.git/']` |
